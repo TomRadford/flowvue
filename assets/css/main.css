@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@layer base {
+  body {
+    color: var(--color-white);
+  }
+}
+
 @theme {
   --color-*: initial;
   --color-white: #ffffff;
@@ -9,4 +15,23 @@
   --color-aqua: #09e0aa;
   --color-orange: #e09109;
   --color-purple: #8709e0;
+  --color-gray: #353535;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: translateX(0);
+    rotate: 10deg;
+  }
+  50% {
+    transform: translateX(-5px);
+    rotate: 0deg;
+  }
+}
+
+@layer utilities {
+  .animate-wiggle {
+    animation: wiggle 1s linear infinite;
+  }
 }

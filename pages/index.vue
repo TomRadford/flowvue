@@ -1,6 +1,13 @@
+<script setup lang="ts">
+import FlowVue from "~/components/FlowVue.vue";
+</script>
+
 <template>
-  <div>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <div class="flex flex-col items-center gap-6 justify-center pt-36">
+    <h1 class="text-3xl font-bold">flowvue</h1>
+    <!-- <p class="text-lg">
+      Simple 
+    </p> -->
     <FlowVue />
   </div>
 </template>
