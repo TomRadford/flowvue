@@ -5,7 +5,15 @@ const count = ref(0);
 </script>
 
 <template>
-  <button class="bg-purple p-5 rounded-2xl" @click="count++">
-    {{ count }}
-  </button>
+  <div>
+    <button class="bg-purple p-5 rounded-2xl" @click="count++">
+      {{ count }}
+    </button>
+  </div>
 </template>
+
+<style scoped>
+div {
+  font-family: Inter, sans-serif;
+}
+</style>

@@ -23,9 +23,17 @@ window.initCustomComponent = (targetId: string = "my-flow-vue") => {
     return;
   }
 
+  // Since we can't use Nuxt fonts here,
+  // just load the Inter font from google
+  // using a link element
+  const fontLink = document.createElement("link");
+  fontLink.rel = "stylesheet";
+  fontLink.href =
+    "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
+  document.head.appendChild(fontLink);
+
   // Create a new instance and mount it
   const customEl = document.createElement("flow-vue");
-
   targetEl.appendChild(customEl);
 };
 
