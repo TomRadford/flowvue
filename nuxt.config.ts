@@ -8,6 +8,6 @@ export default defineNuxtConfig({
   imports: {
     autoImport: false,
   },
-  modules: ["@nuxt/eslint", "@nuxt/fonts"],
+  modules: ["@nuxt/eslint"],
   vite: { plugins: [tailwindcss()] },
 });
