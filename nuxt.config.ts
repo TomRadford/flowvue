@@ -10,4 +10,13 @@ export default defineNuxtConfig({
   },
   modules: ["@nuxt/eslint", "@nuxt/fonts"],
   vite: { plugins: [tailwindcss()] },
+  app: {
+    head: {
+      title: "flowvue 💰", // default fallback title
+      htmlAttrs: {
+        lang: "en",
+      },
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    },
+  },
 });
