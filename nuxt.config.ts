@@ -5,10 +5,13 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
+  // Disable #components imports so
+  // web component build doesnt break
+  components: false,
   imports: {
     autoImport: false,
   },
-  modules: ["@nuxt/eslint", "@nuxt/fonts"],
+  modules: ["@nuxt/eslint", "@nuxt/fonts", "@pinia/nuxt"],
   vite: { plugins: [tailwindcss()] },
   app: {
     head: {
