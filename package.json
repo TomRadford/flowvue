@@ -16,6 +16,7 @@
     "@nuxt/ui": "3.0.0",
     "@pinia/nuxt": "0.10.1",
     "@tailwindcss/vite": "^4.0.15",
+    "@vanillaes/csv": "^3.0.4",
     "eslint": "^9.0.0",
     "nuxt": "^3.16.0",
     "pinia": "^3.0.1",
