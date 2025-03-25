@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import UploadIcon from "../icons/UploadIcon.vue";
 
 const emit = defineEmits<{ fileSelected: [file: File] }>();
 
@@ -20,12 +21,10 @@ const handleFileUpload = (event: Event) => {
     :class="{ 'bg-white/10': isDraggingOver }"
   >
     <div class="flex flex-col items-center gap-3.5">
-      <img
-        src="/icons/upload.svg"
-        class="w-[60px] h-[60px]"
-        alt="Upload icon"
-      />
-      <p class="text-sm font-light">Upload a CSV of your bank statement</p>
+      <UploadIcon />
+      <p class="text-sm font-light">
+        {{ isDraggingOver ? "Drop" : "Upload" }} a CSV of your bank statement
+      </p>
     </div>
     <input
       accept=".csv"
