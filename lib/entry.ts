@@ -1,10 +1,15 @@
 import { defineCustomElement } from "vue";
 import FlowVue from "../components/FlowVue.vue";
-// Import the CSS as a string
 import mainCssText from "../assets/css/main.css?inline";
+import { createPinia } from "pinia";
+
+const pinia = createPinia();
 
 // Convert Vue component to custom element
 const CustomComponentElement = defineCustomElement(FlowVue, {
+  configureApp: (app) => {
+    app.use(pinia);
+  },
   shadowRoot: true,
   // Since FlowVue doesn't import our tailwind main.css,
   // we add it here, which inserts the all the styles as an inline
