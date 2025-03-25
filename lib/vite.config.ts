@@ -48,7 +48,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      // Add any aliases needed for your component
+      // Match Nuxt import alias
+      "~": resolve(__dirname, "../"),
     },
   },
 });
