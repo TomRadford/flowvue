@@ -46,5 +46,11 @@ export const useFlowStore = defineStore("flow", () => {
     }
   };
 
-  return { currentStep, next };
+  const prev = () => {
+    if (currentStepIndex.value > 0) {
+      currentStepIndex.value--;
+    }
+  };
+
+  return { currentStep, next, prev };
 });
