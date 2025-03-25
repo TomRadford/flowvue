@@ -28,7 +28,7 @@ withDefaults(
 
 <template>
   <div
-    class="w-full p-10 relative flex justify-center items-center h-[500px] sm:w-[700px] sm:h-[800px] overflow-hidden bg-black rounded-3xl"
+    class="w-full p-10 relative flex justify-center items-center h-[700px] sm:w-[700px] sm:h-[800px] overflow-hidden bg-black rounded-3xl"
   >
     <div class="w-full h-full z-10">
       <slot />
