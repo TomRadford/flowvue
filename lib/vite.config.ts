@@ -37,7 +37,6 @@ export default defineConfig({
       external: [],
       output: {
         globals: {},
-        inlineDynamicImports: true,
       },
     },
     // ToDo this should be a github release
