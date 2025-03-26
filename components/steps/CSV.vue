@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { useFlowStore } from "~/stores/flow";
+// import { useFlowStore } from "~/stores/flow";
 import DropZone from "../ui/DropZone.vue";
 import { parse } from "@vanillaes/csv";
 import type { Transaction } from "~/types/transactions";
-
-const flowStore = useFlowStore();
 
 const processCsv = async (file: File) => {
   const csvString = await file.text();
@@ -23,7 +21,6 @@ const processCsv = async (file: File) => {
   if (headerRowIndex === -1) {
     // ToDo: add nicer client ui alert
     alert("Could not find a header row in your CSV, please try again");
-    flowStore.prev();
     return;
   }
 
@@ -52,14 +49,12 @@ const processCsv = async (file: File) => {
     // Skip the row if any of the required cells are empty
     if (!date || !amountString || !description) continue;
 
-    // Parse amount (remove spaces and convert to number)
     const amount = parseFloat(amountString.replace(/\s+/g, ""));
 
-    if (isNaN(amount)) continue; // Skip if amount is not a valid number
+    if (isNaN(amount)) continue;
 
     const type = amount >= 0 ? "income" : "expense";
 
-    // Create transaction object
     const transaction: Transaction = {
       date,
       amount: Math.abs(amount),
