@@ -44,7 +44,10 @@ const processCsv = async (file: File) => {
 
     const date = row[dateCellIndex].trim();
     const amountString = row[amountCellIndex].trim();
-    const description = row[descriptionCellIndex].trim();
+    const description = row[descriptionCellIndex]
+      .trim()
+      // Replace long spaces with newline
+      .replace(/\s{2,}/g, "\n");
 
     // Skip the row if any of the required cells are empty
     if (!date || !amountString || !description) continue;
