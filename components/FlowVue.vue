@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useFlowStore } from "~/stores/flow";
 import AppCard from "./ui/AppCard.vue";
+import { FLOW_COMPONENTS } from "~/constants/flow";
 
 /**
  * FlowVue entry point ✨
@@ -17,7 +18,7 @@ const flowStore = useFlowStore();
     :color="flowStore.currentStep.backgroundColor"
     :position="flowStore.currentStep.backgroundPosition"
   >
-    <component :is="flowStore.currentStep.component" />
+    <component :is="FLOW_COMPONENTS[flowStore.currentStep.componentId]" />
   </AppCard>
 </template>
 

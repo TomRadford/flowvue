@@ -1,15 +1,12 @@
-import { defineStore } from "pinia";
-import {
-  computed,
-  defineAsyncComponent,
-  markRaw,
-  ref,
-  type Component,
-} from "vue";
+import { acceptHMRUpdate, defineStore } from "pinia";
+import { computed, ref } from "vue";
 import type { Color, Position } from "../components/ui/AppCard.vue";
+import type { FLOW_COMPONENTS } from "../constants/flow";
 
 type FlowStep = {
-  component: Component;
+  // We cant store the actual component here
+  // since a function isn't string serialisable 🤔
+  componentId: keyof typeof FLOW_COMPONENTS;
   backgroundColor: Color;
   backgroundPosition: Position;
 };
@@ -22,16 +19,12 @@ type FlowStep = {
 export const useFlowStore = defineStore("flow", () => {
   const steps = ref<FlowStep[]>([
     {
-      component: markRaw(
-        defineAsyncComponent(() => import("../components/steps/Welcome.vue"))
-      ),
+      componentId: "welcome",
       backgroundColor: "green",
       backgroundPosition: "bottom-right",
     },
     {
-      component: markRaw(
-        defineAsyncComponent(() => import("../components/steps/CSV.vue"))
-      ),
+      componentId: "csv",
       backgroundColor: "green",
       backgroundPosition: "bottom-left",
     },
@@ -52,5 +45,9 @@ export const useFlowStore = defineStore("flow", () => {
     }
   };
 
-  return { currentStep, next, prev };
+  return { steps, currentStepIndex, currentStep, next, prev };
 });
+
+if (import.meta.hot) {
+  import.meta.hot.accept(acceptHMRUpdate(useFlowStore, import.meta.hot));
+}
