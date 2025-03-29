@@ -28,6 +28,16 @@ export const useFlowStore = defineStore("flow", () => {
       backgroundColor: "green",
       backgroundPosition: "bottom-left",
     },
+    {
+      componentId: "income",
+      backgroundColor: "purple",
+      backgroundPosition: "bottom-right",
+    },
+    {
+      componentId: "expenses",
+      backgroundColor: "orange",
+      backgroundPosition: "bottom-left",
+    },
   ]);
   const currentStepIndex = ref(0);
 
