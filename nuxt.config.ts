@@ -9,7 +9,10 @@ export default defineNuxtConfig({
   // web component build doesnt break
   components: false,
   imports: {
+    // Completely disable auto-imports
+    imports: [],
     autoImport: false,
+    dirs: [],
   },
   modules: ["@nuxt/eslint", "@nuxt/fonts", "@pinia/nuxt"],
   vite: { plugins: [tailwindcss()] },
