@@ -6,7 +6,7 @@ import { FLOW_COMPONENTS } from "~/constants/flow";
 /**
  * FlowVue entry point ✨
  *
- * Used in Nuxt and Web Component 😎
+ * Used in both Nuxt and Web Component 😎
  *
  **/
 
