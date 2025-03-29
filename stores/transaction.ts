@@ -1,5 +1,5 @@
 import { acceptHMRUpdate, defineStore } from "pinia";
-import { ref } from "vue";
+import { computed, ref, watchEffect } from "vue";
 import type { Transaction } from "../types/transactions";
 
 /**
@@ -7,10 +7,20 @@ import type { Transaction } from "../types/transactions";
  *
  * @todo sync them with API 😎
  */
-const useTransactionsStore = defineStore("transaction", () => {
+export const useTransactionsStore = defineStore("transaction", () => {
   const transactions = ref<Transaction[]>([]);
 
-  return { transactions };
+  watchEffect(() => console.log(transactions.value));
+
+  const income = computed(() =>
+    transactions.value.filter((t) => t.type === "income")
+  );
+
+  const expenses = computed(() =>
+    transactions.value.filter((t) => t.type === "expense")
+  );
+
+  return { transactions, expenses, income };
 });
 
 if (import.meta.hot) {
