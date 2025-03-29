@@ -5,7 +5,8 @@
     "paths": {
       // hack to stop #imports from resolving in IDE
       // since we need relative imports for vite build
-      "#imports": ["./disabled-imports"]
+      "#imports": ["./disabled-imports"],
+      "~/*": ["./*"]
     }
   }
 }
