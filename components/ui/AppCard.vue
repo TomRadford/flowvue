@@ -4,6 +4,7 @@ const colors = {
   green: "bg-green",
   aqua: "bg-aqua",
   orange: "bg-orange",
+  purple: "bg-purple",
 };
 
 // Instead of using Tailwind classes for positioning, we'll use style bindings
@@ -28,7 +29,7 @@ withDefaults(
 
 <template>
   <div
-    class="w-full p-10 relative flex justify-center items-center h-[700px] sm:w-[700px] sm:h-[800px] overflow-hidden bg-black rounded-3xl"
+    class="w-full p-2 sm:p-10 relative flex justify-center items-center h-[700px] sm:w-[700px] sm:h-[800px] overflow-hidden bg-black sm:rounded-3xl"
   >
     <div class="w-full h-full z-10">
       <slot />
