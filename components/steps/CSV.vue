@@ -1,8 +1,12 @@
 <script setup lang="ts">
-// import { useFlowStore } from "~/stores/flow";
+import { useFlowStore } from "~/stores/flow";
 import DropZone from "../ui/DropZone.vue";
 import { parse } from "@vanillaes/csv";
 import type { Transaction } from "~/types/transactions";
+import { useTransactionsStore } from "~/stores/transaction";
+
+const flowStore = useFlowStore();
+const transactionsStore = useTransactionsStore();
 
 const processCsv = async (file: File) => {
   const csvString = await file.text();
@@ -70,7 +74,8 @@ const processCsv = async (file: File) => {
     transactions.push(transaction);
   }
 
-  console.log("Parsed transactions:", transactions);
+  transactionsStore.transactions = transactions;
+  flowStore.next();
 };
 </script>
 
