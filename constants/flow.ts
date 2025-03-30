@@ -24,4 +24,10 @@ export const FLOW_COMPONENTS = {
   expenses: createComponentWithLoader(
     () => import("../components/steps/Expenses.vue")
   ),
+  anticipator: createComponentWithLoader(
+    () => import("../components/steps/Anticipator.vue")
+  ),
+  statement: createComponentWithLoader(
+    () => import("../components/steps/Statement.vue")
+  ),
 };
