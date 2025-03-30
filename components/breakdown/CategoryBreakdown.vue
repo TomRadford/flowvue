@@ -19,7 +19,7 @@ const rowStyle = "grid grid-cols-3 gap-3 text-sm text-left font-light";
   <div
     class="bg-[#313131]/40 backdrop-blur-2xl rounded-lg flex flex-col gap-1 py-4 px-5"
   >
-    <h4 class="text-sm mb-2">{{ capitalize(type) }} breakdown</h4>
+    <h4 class="text-sm mb-3 mt-1">{{ capitalize(type) }} breakdown</h4>
     <div class="px-2">
       <table class="w-full">
         <thead class="sticky top-0">
@@ -34,7 +34,7 @@ const rowStyle = "grid grid-cols-3 gap-3 text-sm text-left font-light";
             v-for="(value, name) in categoryTotals"
             :key="name"
             :class="rowStyle"
-            class="py-3 rounded-xl px-3 even:bg-white/10 transition-all"
+            class="py-3 rounded-xl even:bg-white/10"
           >
             <td>
               {{
