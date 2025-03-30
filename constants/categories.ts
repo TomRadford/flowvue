@@ -11,6 +11,7 @@ export const INCOME_CATEGORIES = {
   side_gig: "Side Gig & Freelance",
   pension: "Pension & Retirement",
   social_security: "Social Security",
+  reimbursement: "Reimbursements",
   other_income: "Other Income",
 } as const;
 
