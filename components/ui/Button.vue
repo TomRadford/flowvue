@@ -7,7 +7,7 @@ defineProps<{
 
 <template>
   <button
-    class="bg-black/90 hover:cursor-pointer rounded-lg py-3 px-5 border-1 border-aqua/20 hover:border-aqua/40 transition-[border-color]"
+    class="bg-black/30 backdrop-blur-2xl hover:cursor-pointer rounded-lg py-3 px-5 border-1 border-aqua/20 hover:border-aqua/40 transition-[border-color]"
     @click="$emit('click')"
   >
     {{ label }}
