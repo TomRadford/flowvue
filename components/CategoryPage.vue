@@ -78,11 +78,11 @@ const rowStyle =
             v-for="transaction in displayTransactions"
             :key="transaction.date + transaction.description"
             :class="rowStyle"
-            class="my-2 py-3 even:bg-white/10 transition-all"
+            class="my-2 py-3 even:bg-white/10 transition-all rounded-xl"
           >
-            <td>{{ transaction.date }}</td>
-            <td>{{ formatZAR(transaction.amount) }}</td>
-            <td class="overflow-hidden">
+            <td class="my-auto">{{ transaction.date }}</td>
+            <td class="my-auto">{{ formatZAR(transaction.amount) }}</td>
+            <td class="overflow-hidden my-auto">
               <Tooltip :collision-boundary="safeListContainer">
                 <template #trigger>
                   {{ transaction.description }}
