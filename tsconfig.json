@@ -8,7 +8,7 @@
       // comment this out if you're trying to build
       // ToDo: find a better solution
       // "#imports": ["./disabled-imports"],
-      // "~/*": ["./*"]
+      "~/*": ["./*"]
     }
   }
 }
