@@ -1,6 +1,9 @@
 # flowvue 💰
 
-A simple personal income statement generator web component 🤓
+A simple personal income statement generator site and embedable web component 🤓
+
+![Screenshot 2025-03-30 at 11 09 39](https://github.com/user-attachments/assets/ae160144-96d9-40cd-974a-18e317cb4352)
+
 
 ## [Live Demo](https://flowvue.rad.gdn/)
 
