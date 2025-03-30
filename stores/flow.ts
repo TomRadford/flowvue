@@ -1,7 +1,8 @@
 import { acceptHMRUpdate, defineStore } from "pinia";
 import { computed, ref } from "vue";
-import type { Color, Position } from "../components/ui/AppCard.vue";
+import type { Position } from "../components/ui/AppCard.vue";
 import type { FLOW_COMPONENTS } from "../constants/flow";
+import type { Color } from "../types/colors";
 
 type FlowStep = {
   // We cant store the actual component here
@@ -37,6 +38,16 @@ export const useFlowStore = defineStore("flow", () => {
       componentId: "expenses",
       backgroundColor: "orange",
       backgroundPosition: "bottom-left",
+    },
+    {
+      componentId: "anticipator",
+      backgroundColor: "green",
+      backgroundPosition: "top-left",
+    },
+    {
+      componentId: "statement",
+      backgroundColor: "aqua",
+      backgroundPosition: "top-right",
     },
   ]);
   const currentStepIndex = ref(0);
