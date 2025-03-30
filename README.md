@@ -35,7 +35,7 @@ I used:
 - Nuxt 3 - for the marketing site (also for the syncing backend in the future 👀)
 - Vite - for building the `flow-vue` web component 
 - Tailwind (scoped to the shadow root in the web component 🤯)
-- RekaUI - headless tooltip/select components 
+- Reka UI - headless tooltip/select components 
 
 ## Todo list 📝
 
