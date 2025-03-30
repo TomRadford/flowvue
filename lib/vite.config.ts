@@ -45,6 +45,7 @@ export default defineConfig({
     emptyOutDir: true,
     cssCodeSplit: false,
     cssMinify: true,
+    copyPublicDir: false,
   },
   resolve: {
     alias: {
