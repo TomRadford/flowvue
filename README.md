@@ -1,75 +1,45 @@
-# Nuxt Minimal Starter
+# flowvue 💰
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A simple personal income statement generator web component 🤓
 
-## Setup
+## [Live Demo](https://flowvue.rad.gdn/)
 
-Make sure to install dependencies:
+Check out the live demo deployed at [awesomeoffices.rad.gdn](https://flowvue.rad.gdn/) 🚀
 
-```bash
-# npm
-npm install
+## Local Development
 
-# pnpm
-pnpm install
+- cd your terminal into this directory
+- Install Node 20 (if you use nvm/fnm, you can do `nvm install` / `nvm use`)
+- Install pnpm `corepack enable pnpm` or check out [this](https://pnpm.io/installation) for help
+- run `pnpm dev`
+- the app should be up at `http://localhost:3000/`
+- have fun! 🧑‍🍳
 
-# yarn
-yarn install
+## Deployment
 
-# bun
-bun install
-```
+I have the demo app deployed on a VPS using [Nixpacks](https://nixpacks.com/docs/getting-started) 👏 - nice and old-school 🤓
 
-## Development Server
+## Installing the web component 
 
-Start the development server on `http://localhost:3000`:
+TODO
 
-```bash
-# npm
-npm run dev
+## Tech Stack
 
-# pnpm
-pnpm dev
+I used:
 
-# yarn
-yarn dev
+- Vue ✨
+- TypeScript (essential)
+- Nuxt 3 - for the marketing site (also for the syncing backend in the future 👀)
+- Vite - for building the `flow-vue` web component 
+- Tailwind (scoped to the shadow root in the web component 🤯)
+- RekaUI - headless tooltip/select components 
 
-# bun
-bun run dev
-```
+## Todo list 📝
 
-## Production
+Some nice to haves that could extend the application (and its usefulness) in the future:
 
-Build the application for production:
+- Automatic category detectection by syncing transactions to the backend and using existing user's transcations to determine the category from the description. (Will mostly likely just use a nuxt api route to achieve this with SQLite and Drizzle for the orm)
+- Sharing of breakdowns (which ties nicely into the transactions being stored in the backend for the feature above)
+- Some UI consistency cleanup (typography options could be more strict)
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Thanks for having a look 👏
