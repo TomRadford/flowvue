@@ -34,7 +34,7 @@ const rowStyle = "grid grid-cols-3 gap-3 text-sm text-left font-light";
             v-for="(value, name) in categoryTotals"
             :key="name"
             :class="rowStyle"
-            class="py-3 rounded-xl even:bg-white/10"
+            class="py-3 rounded-xl px-2 even:bg-white/10"
           >
             <td>
               {{
