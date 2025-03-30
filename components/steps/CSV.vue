@@ -90,7 +90,9 @@ const processCsv = async (file: File) => {
     <div class="flex flex-col gap-2">
       <p class="font-extralight text-xs text-right pr-4">
         Download an
-        <a href="/examples/flowvue-example.csv" class="font-bold"> example</a>
+        <a href="/examples/flowvue-simple-example.csv" class="font-bold">
+          example</a
+        >
       </p>
       <DropZone @file-selected="processCsv" />
     </div>
