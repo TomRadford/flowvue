@@ -22,7 +22,10 @@ Checkout out the web component at: [flowvue.rad.gdn/demo/example.html](https://f
 
 ## Deployment
 
-I have the demo app deployed on a VPS using [Nixpacks](https://nixpacks.com/docs/getting-started) 👏 - nice and old-school 🤓
+I have the demo app deployed on a VPS using [Nixpacks](https://nixpacks.com/docs/getting-started) with [Coolify](https://coolify.io/) 👏 - nice and old-school 🤓
+
+- The marketing site uses the `FlowVue` component directly (since we know we're already in a vue app with mostly the same deps)
+- The web component bundles the `FlowVue` component into a `flow-vue` web component - which works as a mini-app and nicely seperates itself from the rest of the user's website.
 
 ## Installing the web component 
 
@@ -48,7 +51,7 @@ I used:
 
 - Vue ✨
 - TypeScript (essential)
-- Nuxt 3 - for the marketing site (also for the syncing backend in the future 👀)
+- Nuxt 3 - for the marketing site (also for the syncing backend/sharing statements in the future 👀)
 - Vite - for building the `flow-vue` web component with code splitting ⚡
 - Tailwind (scoped to the shadow root in the web component 🤯)
 - Reka UI - headless tooltip/select components 
