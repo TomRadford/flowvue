@@ -39,8 +39,9 @@ export default defineConfig({
         globals: {},
       },
     },
-    // ToDo this should be a github release
-    outDir: "dist/lib",
+    // ToDo this could make sense as a github release that triggers npm publish
+    // (which can then be imported by UNPKG cdn in a script tag)
+    outDir: "public/dist",
     emptyOutDir: true,
     cssCodeSplit: false,
     cssMinify: true,

@@ -9,6 +9,9 @@ dist
 # Node dependencies
 node_modules
 
+# Lib build files in public/dist
+public/dist
+
 # Logs
 logs
 *.log
