@@ -15,6 +15,19 @@ export default defineNuxtConfig({
     dirs: [],
   },
   modules: ["@nuxt/eslint", "@nuxt/fonts", "@pinia/nuxt"],
+  nitro: {
+    routeRules: {
+      // Allow CORS for our lib 🤝
+      "/dist/**": {
+        cors: true,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET",
+          "Access-Control-Allow-Headers": "Content-Type,Authorization",
+        },
+      },
+    },
+  },
   vite: { plugins: [tailwindcss()] },
   app: {
     head: {
