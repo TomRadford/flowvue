@@ -24,6 +24,8 @@ Checkout out the web component at: [flowvue.rad.gdn/demo/example.html](https://f
 
 I have the demo app deployed on a VPS using [Nixpacks](https://nixpacks.com/docs/getting-started) with [Coolify](https://coolify.io/) 👏 - nice and old-school 🤓
 
+## How I use `FlowVue`
+
 - The marketing site uses the `FlowVue` component directly (since we know we're already in a vue app with mostly the same deps)
 - The web component bundles the `FlowVue` component into a `flow-vue` web component - which works as a mini-app and nicely seperates itself from the rest of the user's website.
 
