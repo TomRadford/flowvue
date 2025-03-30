@@ -7,7 +7,7 @@ A simple personal income statement generator site and embedable web component �
 
 ## [Live Demo](https://flowvue.rad.gdn/)
 
-Check out the live demo deployed at [awesomeoffices.rad.gdn](https://flowvue.rad.gdn/) 🚀
+Check out the live demo deployed at [flowvue.rad.gdn](https://flowvue.rad.gdn/) 🚀
 
 ## Local Development
 
