@@ -2,7 +2,7 @@
 
 <template>
   <NuxtRouteAnnouncer />
-  <div class="bg-gradient-to-br from-black to-blue/50 relative min-h-screen">
+  <div class="bg-gradient-to-br from-black to-blue/50 relative min-h-screen pb-16">
     <div class="relative z-10">
       <NuxtPage />
     </div>
