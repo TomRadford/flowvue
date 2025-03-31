@@ -4,10 +4,10 @@ import type { Color } from "~/types/colors";
 
 // Instead of using Tailwind classes for positioning, we'll use style bindings
 const positions = {
-  "bottom-right": { bottom: "0px", left: "75%" },
-  "bottom-left": { bottom: "0px", left: "0%" },
-  "top-right": { top: "0px", left: "75%" },
-  "top-left": { top: "0px", left: "0%" },
+  "bottom-right": { top: "calc(100% - 500px)", left: "75%" },
+  "bottom-left": { top: "calc(100% - 500px)", left: "0%" },
+  "top-right": { top: "0%", left: "75%" },
+  "top-left": { top: "0%", left: "0%" },
 };
 
 export type Position = keyof typeof positions;
