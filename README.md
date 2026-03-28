@@ -4,7 +4,6 @@ A simple personal income statement generator site and embedable web component �
 
 ![Screenshot 2025-03-30 at 11 09 39](https://github.com/user-attachments/assets/ae160144-96d9-40cd-974a-18e317cb4352)
 
-
 ## [Live Demo](https://flowvue.rad.gdn/)
 
 Check out the live demo deployed at [flowvue.rad.gdn](https://flowvue.rad.gdn/) 🚀
@@ -29,7 +28,7 @@ I have the demo app deployed on a VPS using [Nixpacks](https://nixpacks.com/docs
 - The marketing site uses the `FlowVue` component directly (since we know we're already in a vue app with mostly the same deps)
 - The web component bundles the `FlowVue` component into a `flow-vue` web component - which works as a mini-app and nicely seperates itself from the rest of the user's website.
 
-## Installing the web component 
+## Installing the web component
 
 In an html file, add the following to your `<head>`:
 
@@ -40,12 +39,12 @@ In an html file, add the following to your `<head>`:
 then somewhere in your `<body>`, add the following:
 
 ```html
- <div id="my-flow-vue"></div>
+<div id="my-flow-vue"></div>
 ```
 
 this will append the `flow-vue` web component to this div as soon as the page loads 🔥
 
-See an example in `demo/example.html` 
+See an example in `demo/example.html`
 
 ## Tech Stack
 
@@ -54,9 +53,10 @@ I used:
 - Vue ✨
 - TypeScript (essential)
 - Nuxt 3 - for the marketing site (also for the syncing backend/sharing statements in the future 👀)
+- Pinia (for sharing state between components)
 - Vite - for building the `flow-vue` web component with code splitting ⚡
 - Tailwind (scoped to the shadow root in the web component 🤯)
-- Reka UI - headless tooltip/select components 
+- Reka UI - headless tooltip/select components
 
 ## Todo list 📝
 

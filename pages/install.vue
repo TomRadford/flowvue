@@ -34,9 +34,7 @@
         </p>
 
         <div class="bg-gray rounded-md p-4 overflow-x-auto">
-          <pre
-            class="text-white text-sm"
-          ><code>&lt;div id="my-flow-vue"&gt;&lt;/div&gt;</code></pre>
+          <pre class="text-white text-sm"><code>&lt;flow-vue/&gt;</code></pre>
         </div>
       </section>
 
